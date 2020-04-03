@@ -1,5 +1,5 @@
 body{
-    background-color: blue;
+    background-color:pink;
     font-family: 'Arial';
 }
 
@@ -10,11 +10,22 @@ h1{
 }
 
 
-.container{
-    border: 5px solid black;
-	height: 600px;
-	width: 600px;
-	margin: 0 auto;
-	padding: 0px;	
-	background-color: black
+#container{
+    /* border: 1px solid black; */
+    display: grid;
+	height: 1000px;
+	width: 1000px;
+	margin:  auto;	
+	/* background-color: black */
 }
+
+.cell {
+    border: 1px solid black;
+    padding: 10px;
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+    background: white;
+    top: 50%;
+    left: 100%; 
+  }
