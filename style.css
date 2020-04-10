@@ -9,9 +9,6 @@ h1{
 	text-transform: uppercase;
 }
 
-:root{
-    grid-size: 25;
-}
 #container{
     border: 1px solid;
     border-color: black;
@@ -26,11 +23,15 @@ h1{
 }
 
 .grid-item{
+    display: flex;
     height: 30px;
     width: 30px;
-    border: 1px solid black;
-    text-align: center;
+    border: solid black;
 }
 .my-color-class{
-    background-color: blue;
+    background-color: black;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
 }
