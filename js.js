@@ -1,28 +1,18 @@
 const container = document.getElementById("container");
-let rows = document.getElementsByClassName("gridRow");
-let cells = document.getElementsByClassName("cell");
 
-defaultGrid();
+document.addEventListener('mouseover', sketch);
 
-// Default 16 by 16 grid
-function defaultGrid(){
-    makeRows(16);
-    makeColumns(16);
-    
-}
-//makes rows
-function makeRows(rowNum){
-    for(r=0; r <rowNum; r++){
-        let row = document.createElement("div");
-        container.appendChild(row).className = "gridRow";
+function makeRows(rows,cols){
+    container.style.setProperty('--grid-size',rows);
+    container.style.setProperty('--grid-size',cols);
+    for (c = 0;c < (rows*cols); c++){
+        let cell = document.createElement("div");
+        container.appendChild(cell).className = "grid-item";
     };
 };
-// makes columns
-function makeColumns(cellNum){
-    for(i = 0; i< rows.length; i++){
-        for(j = 0; j< cellNum; j++){
-            let newCell = document.createElement('div');
-            rows[j].appendChild(newCell).className = "cell";
-        }
-    }
+makeRows(16,16);
+
+// function that detects that overtop of cell, find a way to change the color
+function sketch(){
+    
 }
