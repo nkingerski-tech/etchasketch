@@ -38,3 +38,7 @@ h1{
     display: flex;
     justify-content: center;
 }
+#rainbow,#greyscale, #reset{
+    padding: 8px;
+    margin: 5px;
+}
