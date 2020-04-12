@@ -1,16 +1,18 @@
-const container = document.getElementById("container");
+const container = document.getElementById('container');
 
 // function that makes the grid
-function makeRows(rows,cols){
-    container.style.setProperty('--grid-size',rows);
-    container.style.setProperty('--grid-size',cols);
-    for (c = 0;c < (rows*cols); c++){
-        let cell = document.createElement("div");
-        container.appendChild(cell).className = "grid-item";
+function makeGrid(size){
+    let totalGrid = size * size;
+    for (c = 0;c < totalGrid; c++){
+        const cell = document.createElement('div');
+        cell.classList.add('newSquare');
+        container.appendChild(cell);
         cell.addEventListener('mouseover',sketch);
-    };  
-};
-makeRows(16,16);
+    }
+    document.documentElement.style.setProperty("--rowNum",size);
+    document.documentElement.style.setProperty("--colNum",size);
+}
+makeGrid(16);
 
 // function that detects that overtop of cell, find a way to change the color
 function sketch(e){
